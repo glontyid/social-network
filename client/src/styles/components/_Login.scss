@@ -1,0 +1,44 @@
+@import '../variables';
+
+.login {
+
+  &__title {
+    font-size: $font-size-lg;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    max-width: 320px;
+    margin: 0 auto 10px;
+
+    &-field {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      grid-gap: 10px;
+      margin-bottom: 10px;
+
+      & label {
+        text-align: right;
+      }
+
+      & input {
+        border: none;
+        border-radius: $border-radius;
+        background-color: $background-color-light;
+        padding: 5px;
+      }
+    }
+
+    & button {
+      margin: 15px 0 10px;
+      font-size: $font-size-md;
+    }
+  }
+
+  &__subform-link {
+    color: $select-color;
+    text-decoration: none;
+
+  }
+}

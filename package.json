@@ -1,0 +1,30 @@
+{
+  "name": "online-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "client": "npm run start --prefix client",
+    "server": "nodemon server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^9.0.1",
+    "apollo-server": "^3.10.1",
+    "apollo-server-errors": "^3.3.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.3.0",
+    "graphql": "^16.6.0",
+    "graphql-subscriptions": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.25.6",
+    "subscriptions-transport-ws": "^0.11.0"
+  }
+}

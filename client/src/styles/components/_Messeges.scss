@@ -1,0 +1,139 @@
+.messenger {
+  &__wrapper {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    display: grid;
+    grid-template-columns: 37% 63%;
+    min-height: calc(100vh - 85px);
+  }
+
+  &__left {
+    border-right: 1px solid $border-color;
+  }
+
+  &__right {
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  &__friends {
+    &-empty {
+      height:100%;
+
+      & span {
+        opacity: 0.8;
+      }
+
+      &-link {
+        color: $select-color;
+      }
+    }
+
+    &-active {
+      background-color: $select-color-dark;
+      display: block;
+    }
+
+    &-item {
+      padding: 15px 10px;
+      border-bottom: 1px solid $border-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $background-color-light;
+      }
+
+      &__avatar {
+        width: 50px;
+        height: 49px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+
+      &__content {
+        width: 80%;
+      }
+
+      &__username {
+        font-weight: 700;
+        font-size: $font-size-sm;
+      }
+      
+    }
+  }
+
+  &__chat {
+    height: 100%;
+
+    &-wrapper {
+      height: calc(100vh - 210px);
+      overflow-y: auto;
+      scroll-snap-type: y proximity;
+    }
+
+    &-title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 0 10px 10px;
+      border-bottom: 1px solid $border-color;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    &-body {
+      height: 100%;
+      overflow: hidden;
+      padding: 10px 5px;
+    }
+
+    &-form {
+      border-top: 1px solid $border-color;
+      padding: 20px 10px 10px 10px;
+
+      &-input {
+        width: 100%;
+        margin-right: 10px;
+        border-radius: $border-radius;
+        border: 1px solid $select-color;
+        background-color: $background-color;
+        padding: 7px 10px;
+      }
+    }
+
+    &-item {
+      margin-bottom: 20px;
+      
+      &__avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 15px;
+        align-self: flex-start;
+      }
+
+      &__content {
+        width: 85%;
+      }
+
+      &__username {
+        font-weight: 700;
+        color: $select-color;
+        margin-right: 10px;
+        font-size: $font-size-sx;
+      }
+
+      &__time {
+        opacity: .3;
+        font-size: $font-size-sx;
+      }
+
+      &__message {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '../variables';
+
+.asideMenu {
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border-radius: $border-radius;
+    color: $font-color;
+    text-decoration: none;
+    text-align: left;
+    margin-bottom: 2px;
+
+    &.active {
+      background-color: $background-color-light;
+    }
+
+    &:hover {
+      background-color: $background-color-light;
+    }
+
+    &-icon {
+      margin-right: 10px;
+      color: $select-color;
+    }
+  }
+}

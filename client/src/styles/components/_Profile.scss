@@ -1,0 +1,149 @@
+@import '../variables';
+
+.profile {
+  &__container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 15px;
+  }
+
+  &__avatar {
+    margin-bottom: 15px;
+  }
+
+  &__actions {
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: $background-color;
+    cursor: pointer;
+
+    & > * {
+      color: $select-color;
+    }
+
+    &:hover {
+      background-color: $background-hover;
+    }
+  }
+
+  &__friends-title {
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $background-color-light;
+    padding-bottom: 15px;
+
+    &-length {
+      opacity: 0.5;
+      margin-left: 3px;
+    }
+  }
+
+  &__friends-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      width: 33%;
+      margin-bottom: 15px;
+      &_avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 5px;
+      }
+      &_name {
+        text-align: center;
+      }
+    }
+  }
+
+  &__left {}
+  &__right {}
+
+  &__details {
+    margin-bottom: 15px;
+
+    &-name {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $background-color-light;
+      text-align: left;
+    }
+    &-content {
+
+      &_field {
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        text-align: left;
+        margin-bottom: 5px;
+
+        &-label {
+          opacity: 0.5;
+        }
+        &-value {
+          color: $select-color;
+        }
+      }
+    }
+  }
+
+  &__table {
+    &-title {
+      border-bottom: 1px solid $background-color-light;
+      text-align: left;
+      padding-bottom: 15px;
+    }
+
+    &-content {
+      padding-top: 20px;
+
+    }
+
+    &-item {
+      border-bottom: none;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      &_header {
+        margin-bottom: 15px;
+
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &-avatar {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          margin-right: 15px;
+        }
+        &-time {opacity: .4}
+        &-author {}
+      }
+      &_body {
+        text-align: left;
+      }
+    }
+
+    &-item:not(:last-of-type) {
+      border-bottom: 1px solid $background-color-light;
+    }
+
+    &-form {
+
+      &-input {
+        width: 100%;
+        margin-right: 10px;
+        border-radius: $border-radius;
+        border: 1px solid $select-color;
+        background-color: $background-color;
+        padding: 7px 10px;
+      }
+    }
+  }
+}

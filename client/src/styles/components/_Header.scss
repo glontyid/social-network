@@ -1,0 +1,63 @@
+@import '../variables';
+
+.header-container {
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 3fr 7fr;
+  padding: 10px 0;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &__logo {
+    font-size: 24px;
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  &__bars {
+    margin-left: 10px;
+
+    .header__search-bar {
+      width: 85%;
+
+      .header__search {
+        &-input {
+          background-color: $background-color-light;
+          border: none;
+          border-radius: $border-radius;
+          padding: 10px 20px;
+          width: 100%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .header__notification-bar {
+      padding-top: 5px;
+    }
+  }
+}
+
+.userMenu {
+  &__content {
+
+    &-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+    &-name {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
