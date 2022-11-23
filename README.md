@@ -1,5 +1,7 @@
-# social-network
-
 MERN stack using GraphQL
 
-#use npm run dev for start project
+# social-network
+
+# use "npm install" in root derictory and /client
+
+# use "run dev: for start project
