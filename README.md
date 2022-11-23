@@ -4,4 +4,4 @@ MERN stack using GraphQL
 
 # use "npm install" in root directory and /client
 
-# use "run dev" for start project
+# use "run dev" from root for start project
